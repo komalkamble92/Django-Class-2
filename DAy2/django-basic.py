@@ -1,12 +1,11 @@
 '''
 python -m venv venv_name: Creates a new Python virtual environment named venv_name.
 
-venv_name/Script/activate
-
+source venv_name/bin/activate 
+venv_name\Scripts\activate.bat
 pip install Django==5.0.6: Installs Django version 5.0.6 into the virtual environment.
 
 django-admin startproject myproject: Creates a new Django project named myproject.
-
 django-admin startapp myapp: Creates a new Django app named myapp within the project.
 '''
 
