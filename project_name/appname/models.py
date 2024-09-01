@@ -7,6 +7,35 @@ class ModelName(models.Model): #id
 
     def __str__(self):
         return self.field1
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 # class AllFieldType(models.Model):
 #     # AutoField: It automatically increments.
@@ -87,3 +116,12 @@ class ModelName(models.Model): #id
 #     def __str__(self):
 #         return f'MyModel object ({self.auto_field})'
 
+
+# class Student(models.Model):
+    # first_name = models.CharField(max_length=100)
+    # last_name = models.CharField(max_length=100)
+    # age = models.IntegerField() #123
+    # date_of_birth = models.DateField()
+
+    # def __str__(self):
+    #     return f"{self.first_name} {self.last_name}"

@@ -35,6 +35,8 @@ getting all data
 
 1. Student.objects.all()
 2. Student.objects.filter(student_name='ram').
+2. Student.objects.create(name='Student', age=4)
+2. Student.objects.exclude(student_name='ram')
 3. Student.objects.get(student_name='ram')
 4. Student.objects.order_by('student_name')
 5. Student.objects.filter(student_name='ram').order_by('student_name')
