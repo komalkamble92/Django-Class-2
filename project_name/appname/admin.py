@@ -4,6 +4,7 @@ from .models import *
 
 admin.site.register(ModelName)
 
+admin.site.register(AllFieldType)
 
 
 
@@ -53,5 +54,4 @@ fields: Specifies the order and which fields appear in the add/change form for S
 fieldsets: Allows you to group fields in sections in the add/change form, providing a more organized layout.
 '''
 # admin.site.register(Student)
-# admin.site.register(AllFieldType)
 
