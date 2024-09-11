@@ -7,42 +7,33 @@ admin.site.register(ModelName)
 admin.site.register(AllFieldType)
 
 
+# admin.site.register(Student)
 
 
-
-
-
-
-
-
-
-
-
-# Register the Student model with the admin interface
-# @admin.register(Student)
-# class StudentAdmin(admin.ModelAdmin):
+@admin.register(Student)
+class StudentAdmin(admin.ModelAdmin):
     # Display these fields in the admin list view
-    # list_display = ('first_name', 'last_name', 'age', 'date_of_birth')
+    list_display = ('first_name', 'last_name', 'age', 'date_of_birth')
 
-    # # Enable filtering by age and date_of_birth in the admin panel
-    # list_filter = ('age', 'date_of_birth')
+    # Enable filtering by age and date_of_birth in the admin panel
+    list_filter = ('age', 'date_of_birth')
 
-    # # Enable search functionality by first_name and last_name
-    # search_fields = ('first_name', 'last_name')
+    # Enable search functionality by first_name and last_name
+    search_fields = ('first_name', 'last_name')
 
-    # # Define the fields layout in the add/change form
-    # # fields = ('first_name', 'last_name', 'age', 'date_of_birth')
+    # Define the fields layout in the add/change form
+    # fields = ('first_name', 'last_name', 'age', 'date_of_birth')
 
-    # # Optionally, define fieldsets for a more organized form layout
-    # fieldsets = (
-    #     (None, {
-    #         'fields': ('first_name', 'last_name')
-    #     }),
-    #     ('Additional Info', {
-    #         'fields': ('age', 'date_of_birth'),
-    #         'classes': ('collapse',)  # Collapsible section
-    #     }),
-    # )
+    # Optionally, define fieldsets for a more organized form layout
+    fieldsets = (
+        (None, {
+            'fields': ('first_name', 'last_name')
+        }),
+        ('Additional Info', {
+            'fields': ('age', 'date_of_birth'),
+            'classes': ('collapse',)  # Collapsible section
+        }),
+    )
 '''
 Explanation:
 @admin.register(Student): This decorator registers the Student model with the admin site and associates 
