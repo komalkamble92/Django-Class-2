@@ -6,6 +6,8 @@ from .models import Author, Publisher, Book, Reader, Reading, BookReader
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+    
+# admin.site.register(Author, AuthorAdmin)
 
 @admin.register(Publisher)
 class PublisherAdmin(admin.ModelAdmin):

@@ -46,3 +46,4 @@ fieldsets: Allows you to group fields in sections in the add/change form, provid
 '''
 # admin.site.register(Student)
 
+
