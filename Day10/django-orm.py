@@ -8,7 +8,6 @@ from appname.models import Student
 from appname.models import Student, Modelname2, Modelname3,
 
 
-
 In [4]: Student.objects.all()
 Out[4]: <QuerySet [<Student: AAKANKSHA BAISHWADE>, <Student: Demo_customer Guardians>]>
 
@@ -35,4 +34,8 @@ In [10]: student.save()
           age=22,
           date_of_birth=date(2002, 5, 30)
       )
+      
+how to get data 
+student = Student.objects.get(id=1)
+student = Student.objects.get(age=1)
 '''
