@@ -4,6 +4,8 @@
 
 Student.objects.filter(age__lt=25)
 
+Student.objects.get(name='ram',).filter(age=1).delete()
+
 filter = Student.objects.filter(field_name)
 
 field_name=value (Exact match)
@@ -14,4 +16,6 @@ field_name__startswith=value (Starts with)
 field_name__endswith=value (Ends with)
 field_name__in=[value1, value2] (Contained within a list)
 field_name__isnull=True (Is null)
+
+
 '''
