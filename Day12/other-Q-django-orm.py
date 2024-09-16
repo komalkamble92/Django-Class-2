@@ -6,7 +6,7 @@ average_age = Student.objects.aggregate(Avg('age'))
 
 from django.db.models import Count
 
-tudents = models.ManyToManyField(Student, related_name='courses')
+students = models.ManyToManyField(Student, related_name='courses')
 
 students_with_course_count = Student.objects.annotate(course_count=Count('courses')) #Todo
 

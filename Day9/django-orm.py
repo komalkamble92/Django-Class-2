@@ -21,6 +21,7 @@ getting all data
 12. Student.objects.filter(first_name='ram').update(age=50)
 
 
+#todo
 from django.db.models import F
 from django.db import models
 
