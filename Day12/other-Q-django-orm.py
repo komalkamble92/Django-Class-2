@@ -8,7 +8,7 @@ from django.db.models import Count
 
 students = models.ManyToManyField(Student, related_name='courses')
 
-students_with_course_count = Student.objects.annotate(course_count=Count('courses')) #Todo
+students_with_course_count = Student.objects.annotate(course_count=Count('courses')) 
 
 students = Student.objects.order_by('age')
 students_desc = Student.objects.order_by('-age')

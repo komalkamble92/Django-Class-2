@@ -3,13 +3,17 @@ from .views import * # . = root path
 from appname.api import * # all classes imported
 
 from . import api
-from appname import api # api.py file imported
+from appname import views 
 
 
 
 # {{base url}}/app(prefix)/about/
 
 urlpatterns = [
+    path('home/', views.home, name='home'),
+    path('home2/', views.home2, name='home2'), 
+    path('students/', views.student_list, name='student_list'),  # URL for student list
+
     # path('Login/', Login, name='home yguuy jhiiu '),
     # path(endpoint , filename.classname, discription)
     
