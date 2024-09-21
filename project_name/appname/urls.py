@@ -10,6 +10,7 @@ from appname import views
 # {{base url}}/app(prefix)/about/
 
 urlpatterns = [
+    path('function_list/', views.function_list, name='home'),
     path('home/', views.home, name='home'),
     path('home2/', views.home2, name='home2'), 
     path('students/', views.student_list, name='student_list'),  # URL for student list
