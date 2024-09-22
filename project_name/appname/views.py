@@ -19,3 +19,9 @@ def home2(request):
 def student_list(request):
     students = Student.objects.all()  # Fetch all student records from the database
     return render(request, 'student_list.html', {'students': students})
+
+def function_list(request):
+    if request.method == 'GET':
+        return HttpResponse('Student')
+    else:
+        return HttpResponse('Invalid request method')
