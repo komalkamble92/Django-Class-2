@@ -10,7 +10,6 @@ getting all data
 5. Student.objects.filter(first_name='ram').order_by('first_name')
 6. Student.objects.values('first_name')
 7. Student.objects.values_list('first_name')
-
 13. Student.objects.filter(first_name='ram').delete()
 14. Student.objects.filter(first_name='ram').exists()
 15. Student.objects.all().count()
@@ -21,7 +20,7 @@ getting all data
 12. Student.objects.filter(first_name='ram').update(age=50)
 
 
-#todo
+
 from django.db.models import F
 from django.db import models
 
