@@ -13,16 +13,13 @@ urlpatterns = [
     path('function_list/', views.function_list, name='home'),
     path('home/', views.home, name='home'),
     path('home2/', views.home2, name='home2'), 
+    path('get_student/', views.get_students, name='student_list'),  # URL for student list
     path('students/', views.student_list, name='student_list'),  # URL for student list
+    path('add_student/', views.add_student, name='add_student'),
+    path('delete_student/<int:student_id>/', views.delete_student, name='delete_student'),
+    path('update_student/<int:pk>/', views.update_student, name='update_student'),
 
-    # path('Login/', Login, name='home yguuy jhiiu '),
     # path(endpoint , filename.classname, discription)
     
-    
-    
-    # path('about/', api.about, name='about'),
-    # path('about/', about, name='about'),
-    # path('contact/', views.contact, name='contact'),
-    # path('services/', views.services, name='services'),
-    # path('products/', views.products, name='products'),
+  
 ]

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from appname.models import *
+from appname.forms import *
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
@@ -25,3 +27,41 @@ def function_list(request):
         return HttpResponse('Student')
     else:
         return HttpResponse('Invalid request method')
+    
+
+
+def get_students(request):
+    students = Student.objects.all()
+    return render(request, 'students3.html', {'students': students})
+
+
+def add_student(request):
+    if request.method == 'POST':
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('student_list')
+    else:
+        form = StudentForm()
+    return render(request, 'add_student.html', {'form': form})
+
+
+def delete_student(request, student_id):
+    student = get_object_or_404(Student, id=student_id)
+    if request.method == 'POST':
+        student.delete()
+        return redirect('student_list')
+    return render(request, 'confirm_delete.html', {'student': student})
+
+
+
+def update_student(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    if request.method == 'POST':
+        form = StudentForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+            return redirect('student_list')
+    else:
+        form = StudentForm(instance=student)
+    return render(request, 'update_student.html', {'form': form})
